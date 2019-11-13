@@ -2,7 +2,7 @@
   "name": "strap",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Dasre/react-my-pages",
+  "homepage": "https://Dasre.github.com/react-page",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
