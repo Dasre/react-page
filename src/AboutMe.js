@@ -22,17 +22,17 @@ class AboutMe extends Component {
         <h2 className="text-center mb-4">關於我</h2>
         <Container>
           <Row>
-            <Col md="6" className={`${style.img}`}>
+            <Col md="6" className={style.img}>
               <img src={logo} className={`${rounded} ${style.imgTransform}` } alt="123" />
             </Col>
-            <Col md="6" className="mx-auto my-auto">
-              <ul className="text-center">{Object.keys(me).map((key) => {
+            <Col md="6" className="mx-auto my-auto clearfix">
+              <ul className={style.text}>{Object.keys(me).map((key) => {
                 const value = me[key];
                 if(key === "E-mail") return(<li key={key}>{key}: <a href={value}>{value}</a></li>);
 
-                return( <li key={key}>{key}: {value}</li>);
+                return(<li key={key}>{key}: {value}</li>);
               })}</ul>
-              <div className="d-flex justify-content-center">
+              <div className={style.button}>
                 <Button className="mr-2" href="https://github.com/Dasre">
                   <FontAwesomeIcon icon={faGithub} size="3x"></FontAwesomeIcon>
                 </Button>

@@ -1,9 +1,12 @@
-.img{
-  height: 300px;
-  width: 300px;
-}
 
+.img{
+  height: 400px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .imgTransform{
+
   max-height: 100%;  
   max-width: 100%; 
   width: auto;
@@ -14,5 +17,32 @@
   left: 0;  
   right: 0;  
   margin: auto;
-  
+  align-self: center;
+}
+
+
+@media (max-width:768px){
+  .imgTransform{
+    align-self: center;
+  }
+
+}
+
+.text{
+  text-align: left;
+}
+
+.button{
+  display: flex;
+  margin-left: 1em;
+  justify-content: left;
+}
+
+@media (max-width: 768px){
+  .button{
+    justify-content: center; 
+  }
+  .text{
+    text-align: center;
+  }
 }

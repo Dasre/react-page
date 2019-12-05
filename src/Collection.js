@@ -5,6 +5,7 @@ import collectionJSON from './Collection.json'
 import Carousel from './Carousel';
 import DL from './img/DL.png';
 import fourth from './img/4.png';
+import fifth from './img/5.png';
 
 const my_3 = "my-3"
 const flex_reverse = "flex-row-reverse";
@@ -40,7 +41,7 @@ class Collection extends Component {
                 <p>{text[0]}</p>
               </Col>
               <Col md="6">
-                <img src={DL} className={style.img} alt=""></img>
+                
               </Col>
             </Row>
 
@@ -51,8 +52,6 @@ class Collection extends Component {
                 <p>{text[1]}</p>
               </Col>
               <Col md="6">
-                <Carousel></Carousel>
-                <div className={style.img}></div>
               </Col>
             </Row>
 
@@ -63,9 +62,7 @@ class Collection extends Component {
                 <p>{text[2]}</p>
               </Col>
               <Col md="6">
-                <div className="embed-responsive embed-responsive-16by9">
-                  <iframe title="game" className="embed-responsive-item" src="https://www.youtube.com/embed/LD9bSVSOgoQ"></iframe>
-                </div>
+                <img src={DL} className={style.img} alt=""></img>
               </Col>
             </Row>
 
@@ -76,10 +73,45 @@ class Collection extends Component {
                 <p>{text[3]}</p>
               </Col>
               <Col md="6">
+                <Carousel></Carousel>
+                <div className={style.img}></div>
+              </Col>
+            </Row>
+
+            <Row className={my_3+" "+style.timelinePointer}>
+              <Col md="6">
+                <h3>{year[4]}</h3>
+                <h5>{title[4]}</h5>
+                <p>{text[4]}</p>
+              </Col>
+              <Col md="6">
+                <div className="embed-responsive embed-responsive-16by9">
+                  <iframe title="game" className="embed-responsive-item" src="https://www.youtube.com/embed/LD9bSVSOgoQ"></iframe>
+                </div>
+              </Col>
+            </Row>
+
+            <Row className={my_3+" "+flex_reverse+" "+ style.timelinePointer}>
+              <Col md="6">
+                <h3>{year[5]}</h3>
+                <h5>{title[5]}</h5>
+                <p>{text[5]}</p>
+              </Col>
+              <Col md="6">
                 <img src={fourth} className={style.img} alt=""></img>
               </Col>
             </Row>
 
+            <Row className={my_3+" "+style.timelinePointer}>
+              <Col md="6">
+                <h3>{year[6]}</h3>
+                <h5>{title[6]}</h5>
+                <p>{text[6]}</p>
+              </Col>
+              <Col md="6">
+                <img src={fifth} className={style.img} alt=""></img>
+              </Col>
+            </Row>
 
           </div>
         </Container>

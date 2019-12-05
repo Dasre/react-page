@@ -1,22 +1,37 @@
 {
   "1":{
+    "year": "2019/12 行果整合",
+    "title": "力翰科學ERP系統",
+    "text": "使用PHP CodeIgniter框架擴充ERP系統功能與Debug。"
+  },
+  "2":{
+    "year": "2019/11 行果整合",
+    "title": "行政院人事行政總處公務人力發展中心教育訓練資訊系統",
+    "text": "負責將部分功能從原VB6架構轉至PHP Laravel框架開發，以及Debug。"
+  },
+  "3":{
     "year": "研究所",
     "title": "LSTM及GRU模型用於預測市區交通流量之研究",
     "text": "透過爬蟲的方式取得2017年台北市VD資料、天氣資料和小巨蛋資料，並透過深度學習中的LSTM和GRU模型去進行預測，同時比較不同架構下的效益。"
   },
-  "2":{
+  "4":{
     "year": "碩二",
     "title": "基於區塊鏈的遊戲寶物交易平台",
-    "text": "搭配Ganache，並建立基於ERC721和ERC20基準的寶物交易平台。"
+    "text": "透過JavaScript與web3.js進行溝通，並搭配Ganache模擬出多 使用者的情況，建立一套基於ERC721和ERC20基準的寶物交易平台。"
   },
-  "3":{
+  "5":{
     "year": "碩一",
     "title": "你今天要來點錯別字嗎？",
     "text": "前端使用HTML5+CSS+jQuery+CreateJS，後端使用Node.js的Express框架，搭配Firebase製作而成的錯別字練習小遊戲。"
   },
-  "4":{
+  "6":{
     "year": "大四",
     "title": "台北市CCTV設置因素探討",
     "text": "透過台北市Opendata資料，透過R語言進行資料處理請洗，並進行資料分析，了解台北市CCTV設置的因素與其效益。"
+  },
+  "7":{
+    "year": "大四",
+    "title": "銀髮養生園區3D導覽系統",
+    "text": "負責Kinect行走偵測，Leep Motion手指指勢的設定。與專案整體的整合。"
   }
 }
