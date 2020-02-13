@@ -1,0 +1,110 @@
+$brown: rgb(163, 148, 128);
+$red: rgb(241, 124, 103);
+$khaki: rgb(215, 185, 142);
+
+@mixin position{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.all{
+  position: relative;
+  
+  > div {
+    position: absolute;
+    width: 600px;
+    height: 380px;
+    background :#F1F1F1;
+    margin: 50px;
+    overflow: hidden;
+    transition: opacity 5s ease-in-out;
+  }
+}
+
+.envelope{
+  .left{
+    @include position;
+    top: 1px;
+    border-left: 235px solid $brown;
+    border-top: 190px solid transparent;
+    border-bottom: 190px solid transparent;
+  }
+  .right{
+    @include position;
+    top: 1px;
+    right: 0;
+    border-right: 235px solid $brown;
+    border-top: 190px solid transparent;
+    border-bottom: 190px solid transparent;     
+  }
+  .bottom{
+    @include position;
+    bottom: 0;
+    border-bottom: 242px solid $khaki;
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+  }
+  .top{
+    @include position;
+    top: 0;
+    z-index: 3 !important;
+    border-top: 250px solid $red;
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+  }
+}
+
+
+.circle{
+  border: 1px solid transparent;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(232, 122, 144);
+  border-radius: 100%;
+  z-index: 5;
+  outline: none !important;
+  transition: opacity 1s ease-in-out;
+  
+  &:active{
+    border: 1px solid rgb(165, 222, 258);
+  }
+}
+
+.letter{
+  background-color: rgb(238, 169, 169) !important; 
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  
+  > div{
+    margin-top: 2%;
+    margin-left: 2%;
+  }
+}
+
+.close{
+  transform-origin: top;
+  animation: down-to-top 4s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.opacity{
+  opacity: 0;
+}
+
+
+@keyframes down-to-top {
+  from {
+    transform: perspective(10000px) rotateX(0);
+  }
+  to {
+    transform: perspective(10000px) rotateX(-180deg);
+  }
+}

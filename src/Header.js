@@ -6,10 +6,12 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink} from 'reactstrap';
-//import style from './Header.module.scss';
+  NavLink,
+} from 'reactstrap';
+import { NavLink as RRLink } from 'react-router-dom';
+// import style from './Header.module.scss';
 
-const Header = (props) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -17,21 +19,21 @@ const Header = (props) => {
   return (
     <div>
       <Navbar color="dark" dark expand="md">
-        <NavbarBrand className="text-white" href="/react-page">Andy Chen</NavbarBrand>
+        <NavbarBrand className="text-white" href="/App">Andy Chen</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink className="text-white" href="#aboutme">關於我</NavLink>
+              <NavLink tag={RRLink} className="text-white" to="/App">Me</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="text-white" href="#collection">作品</NavLink>
+              <NavLink tag={RRLink} className="text-white" to="/envelope">Envelope</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
     </div>
   );
-}
+};
 
 export default Header;
