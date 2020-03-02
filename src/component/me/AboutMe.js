@@ -12,8 +12,8 @@ import {
   faGithub,
   faBlogger,
 } from '@fortawesome/free-brands-svg-icons';
-import logo from './img/mypicture.jpg';
-import style from './stylesheets/AboutMe.module.scss';
+import logo from '../../img/mypicture.jpg';
+import style from '../../stylesheets/AboutMe.module.scss';
 
 
 const me = {

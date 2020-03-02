@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import style from './stylesheets/Collection.module.scss';
+import style from '../../stylesheets/Collection.module.scss';
 import collectionJSON from './Collection.json';
 import Carousel from './Carousel';
-import DL from './img/DL.png';
-import fourth from './img/4.png';
-import fifth from './img/5.png';
+import DL from '../../img/DL.png';
 
 class Collection extends Component {
   constructor(props) {
@@ -33,15 +31,20 @@ class Collection extends Component {
                 <h5>{title[0]}</h5>
                 <p>{text[0]}</p>
               </Col>
-              <Col md="6" />
+              <Col md="6">
+                <a href="https://dasre.github.io/maskMap/" target="blank">我是連結</a>
+              </Col>
             </Row>
+
             <Row className={`my_3 flex-row-reverse ${style.timelinePointer}`}>
               <Col md="6">
                 <h3>{year[1]}</h3>
                 <h5>{title[1]}</h5>
                 <p>{text[1]}</p>
               </Col>
-              <Col md="6" />
+              <Col md="6">
+                <img src={DL} className={style.img} alt="" />
+              </Col>
             </Row>
 
             <Row className={`my_3 ${style.timelinePointer}`}>
@@ -51,7 +54,8 @@ class Collection extends Component {
                 <p>{text[2]}</p>
               </Col>
               <Col md="6">
-                <img src={DL} className={style.img} alt="" />
+                <Carousel />
+                <div className={style.img} />
               </Col>
             </Row>
 
@@ -62,43 +66,9 @@ class Collection extends Component {
                 <p>{text[3]}</p>
               </Col>
               <Col md="6">
-                <Carousel />
-                <div className={style.img} />
-              </Col>
-            </Row>
-
-            <Row className={`my_3 ${style.timelinePointer}`}>
-              <Col md="6">
-                <h3>{year[4]}</h3>
-                <h5>{title[4]}</h5>
-                <p>{text[4]}</p>
-              </Col>
-              <Col md="6">
                 <div className="embed-responsive embed-responsive-16by9">
                   <iframe title="game" className="embed-responsive-item" src="https://www.youtube.com/embed/LD9bSVSOgoQ" />
                 </div>
-              </Col>
-            </Row>
-
-            <Row className={`my_3 flex-row-reverse ${style.timelinePointer}`}>
-              <Col md="6">
-                <h3>{year[5]}</h3>
-                <h5>{title[5]}</h5>
-                <p>{text[5]}</p>
-              </Col>
-              <Col md="6">
-                <img src={fourth} className={style.img} alt="" />
-              </Col>
-            </Row>
-
-            <Row className={`my_3 ${style.timelinePointer}`}>
-              <Col md="6">
-                <h3>{year[6]}</h3>
-                <h5>{title[6]}</h5>
-                <p>{text[6]}</p>
-              </Col>
-              <Col md="6">
-                <img src={fifth} className={style.img} alt="" />
               </Col>
             </Row>
           </div>

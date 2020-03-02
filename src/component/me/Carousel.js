@@ -6,10 +6,10 @@ import {
   CarouselIndicators,
 } from 'reactstrap';
 
-import thirdOne from './img/3-1.png';
-import thirdTwo from './img/3-2.png';
-import thirdThird from './img/3-3.png';
-import style from './stylesheets/Carousel.module.scss';
+import thirdOne from '../../img/3-1.png';
+import thirdTwo from '../../img/3-2.png';
+import thirdThird from '../../img/3-3.png';
+import style from '../../stylesheets/Carousel.module.scss';
 
 const items = [
   {
@@ -20,7 +20,7 @@ const items = [
   },
   {
     src: thirdThird,
-  }
+  },
 ];
 
 const Example = (props) => {
@@ -31,30 +31,28 @@ const Example = (props) => {
     if (animating) return;
     const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
-  }
+  };
 
   const previous = () => {
     if (animating) return;
     const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
-  }
+  };
 
   const goToIndex = (newIndex) => {
     if (animating) return;
     setActiveIndex(newIndex);
-  }
+  };
 
-  const slides = items.map((item) => {
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <img className={style.img} src={item.src} alt=""/>
-      </CarouselItem>
-    );
-  });
+  const slides = items.map((item) => (
+    <CarouselItem
+      onExiting={() => setAnimating(true)}
+      onExited={() => setAnimating(false)}
+      key={item.src}
+    >
+      <img className={style.img} src={item.src} alt="" />
+    </CarouselItem>
+  ));
 
   return (
     <Carousel
@@ -68,6 +66,6 @@ const Example = (props) => {
       <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
     </Carousel>
   );
-}
+};
 
 export default Example;
